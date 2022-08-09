@@ -15,7 +15,9 @@ taobaoTime_url = 'http://api.m.taobao.com/rest/api3.do?api=mtop.common.getTimest
 headers = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36'
 }
-times='2022-07-28 19:59:59.000000'
+# 获取今天预备抢购的日期
+now_time = datetime.datetime.now().strftime('%Y-%m-%d')
+times=now_time+' 19:59:59.000000'
 class taobao():
 
     def iselement(browser, xpaths):
